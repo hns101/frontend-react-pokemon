@@ -1,12 +1,17 @@
 import './App.css'
 import {useEffect, useState} from "react";
 import axios from "axios";
-import pokeApiLogo from "./assets/pokeapi_256.png";
+import PokeCard from "./components/PokeCard.jsx";
 
 function App() {
 
     const API_URI = 'https://pokeapi.co/api/v2/pokemon/charmander';
-    const [data, setData] = useState([]);
+    const API_URI_ZAPDOS = 'https://pokeapi.co/api/v2/pokemon/zapdos';
+    const API_URI_ALL = 'https://pokeapi.co/api/v2/pokemon/?limit=20';
+
+    const [data, setData] = useState();
+    const [dataZap, setDataZap] = useState();
+    const [allData, setAllData] = useState();
 
 
     const fetchData = async () => {
@@ -14,6 +19,12 @@ function App() {
             const response = await axios.get(API_URI);
             setData(response.data);
             console.log(response.data);
+            const response1 = await axios.get(API_URI_ZAPDOS);
+            setDataZap(response1.data);
+            console.log(response1.data);
+            const result = await axios.get(API_URI_ALL);
+            console.log(result.data);
+            setAllData(result.data);
         } catch (error) {
             console.error(error);
         }
@@ -26,15 +37,13 @@ function App() {
 
         return (
             <>
+                <header className="header">
                 <h1>Pokedex</h1>
-                <img src={pokeApiLogo} className="poke-api-logo" alt="Poke API Logo"/>
+                </header>
                 <main className="main">
 
-                    <div className="poke-card">
-                        <p>{data.name}</p>
-                        <p>Weigth {data.weight}</p>
-                        <p>{data.moves?.length || 0}</p>
-                    </div>
+                    {data && <PokeCard data={data} />}
+                    {dataZap && <PokeCard data={dataZap} />}
 
                 </main>
 

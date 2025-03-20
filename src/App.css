@@ -1,18 +1,58 @@
 /*Schrijf hier jouw eigen CSS!*/
 
-.poke-api-logo {
-    height: 40px;
-}
-.main {
+.header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+    background: #313131;
+    width: 100vw;
+    color: #ffffff;
+    margin-bottom: 40px;
+
+}
+.main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     width: 100%;
+    gap: 1.5rem;
 }
-.poke-card {
-    background-color: #777777;
-    min-height: 400px;
-    width: 300px;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
