@@ -1,0 +1,35 @@
+.poke-card {
+    color: #1a1a1a;
+    background-color: #ffffff;
+    min-height: 400px;
+    width: 200px;
+    border-radius: 10px;
+    padding-bottom: 10px;
+}
+.card-name{
+    margin: 0 ;
+    padding: 15px 15px 50px 15px ;
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 10px 10px 0 0;
+    border-bottom: 22px #adadad solid ;
+    background-color: #b41500;
+}
+.poke-image {
+    background: #ffffff;
+    border-radius: 100px;
+    height: 120px;
+    margin-top: -68px;
+    padding: 7px;
+    box-shadow: rgba(26, 26, 26, 0.25) 0 3px 4px;
+}
+.ability {
+    border-radius: 10px;
+    padding: 2px;
+    margin: 10px 30px;
+    background-color: #c9c9c9;
+}
+.poke-text{
+    margin: 0;
+}
