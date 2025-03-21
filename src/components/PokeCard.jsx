@@ -1,4 +1,3 @@
-import React from 'react';
 import './PokeCard.css'
 
 function PokeCard({data}) {

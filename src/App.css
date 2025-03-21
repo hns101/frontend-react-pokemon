@@ -1,5 +1,6 @@
 /*Schrijf hier jouw eigen CSS!*/
 
+
 .header {
     display: flex;
     flex-direction: column;
@@ -12,6 +13,28 @@
     margin-bottom: 40px;
 
 }
+.poke-logo {
+    height: 80px;
+    margin: 20px;
+}
+.poke-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin: 10px;
+}                         
+.pokedex {
+    margin: 0;
+}
+
+button {
+    height: 40px;
+
+}
+button:disabled {
+    background: #4f4c4c;
+}
+
 .main {
     display: flex;
     flex-direction: row;
@@ -19,25 +42,27 @@
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 100%;
+    width: 100vw;
     gap: 1.5rem;
+    padding-bottom: 2rem;
 }
 
+.poke-outer-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 88%;
+    gap: 1rem;
 
+}
+.poke-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 
 
